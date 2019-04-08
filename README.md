@@ -23,12 +23,6 @@ Create an archive<br>
 Set password to archive<br>
 <br>
     
-    archiver.add (String input, File output);
-    archiver.add (String input, File output, String password);
-    
-Create new archive<br>
-<br/>
-    
     archiver.add (String|File|InputStream input);
     
 Adds file, folder or stream to archive<br>
@@ -51,6 +45,4 @@ Get entry from archive<br>
 
     archiver.unpack (String|File folder);
     
-Unpacks archieve to folder<br>
-<br>
-
+Unpacks archieve to folder
