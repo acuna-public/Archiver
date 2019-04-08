@@ -3,10 +3,10 @@ Archiver is a powerful and elegant archiving library. Supported formats:
 
 - Zip
 - Tar
-- Gzip
-
-**Usage**<br>
+- Gzip<br>
 <br>
+
+**Usage**
 
      Archiver archiver = new Archiver ();
      
