@@ -1,0 +1,16 @@
+  apply plugin: 'java-library'
+
+  apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/bintray.gradle'
+  apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/publish.gradle'
+  
+  dependencies {
+    
+    implementation fileTree (include: ['*.jar'], dir: 'libs')
+    
+    implementation project (':jtar')
+    api project (':jabadaba')
+    
+  }
+  
+  sourceCompatibility = '1.7'
+  targetCompatibility = '1.7'
