@@ -17,7 +17,8 @@
 	import java.util.Map;
 	
 	import pro.acuna.archiver.providers.Gzip;
-	import pro.acuna.archiver.providers.Zip;
+  import pro.acuna.archiver.providers.Tar;
+  import pro.acuna.archiver.providers.Zip;
 	import pro.acuna.jabadaba.Arrays;
 	import pro.acuna.jabadaba.Console;
 	import pro.acuna.jabadaba.Crypto;
@@ -56,7 +57,7 @@
 		public Archiver () {
 			
 			addProvider (new Zip ());
-			//addProvider (new Tar ());
+			addProvider (new Tar ());
 			addProvider (new Gzip ());
 			
 			crypto = new Crypto ();
