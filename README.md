@@ -1,11 +1,10 @@
 # Archiver
-Archiver is a powerful and elegant archiving library. Also supports AES-encruption of files by password.
+Archiver is a powerful and elegant archiving library. Also supports AES-encruption of files by password and gzip compression.
 
 Supported formats:
 
 - Zip
-- Tar
-- Gzip<br>
+- Tar<br>
 <br>
 
 **Usage**
