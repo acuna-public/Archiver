@@ -1,5 +1,5 @@
 # Archiver
-Archiver is a powerful and elegant archiving library. Supports AES-encruption by password and gzip compression.
+Archiver is a powerful and elegant archiving library for Java. Supports AES-encruption by password and gzip compression.
 
 Supported formats:
 
