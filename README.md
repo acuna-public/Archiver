@@ -8,15 +8,18 @@ Archiver is a powerful and elegant archiving library for Java<br>
 - Don't using side libraries, only native Java API
 - Supporting AES-encruption by password
 <br>
+
 **Supported archives**
 
 - [x] Zip
 - [x] Tar
 <br>
+
 **Supported compressions**
 
 - [x] gzip
 <br>
+
 **Usage**
 
      Archiver archiver = new Archiver ();
