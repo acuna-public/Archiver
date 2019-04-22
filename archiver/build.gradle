@@ -7,8 +7,10 @@
     
     implementation fileTree (include: ['*.jar'], dir: 'libs')
     
-    implementation project (':jtar')
-    api project (':jabadaba')
+		implementation 'pro.acuna:jtar:+'
+    //implementation project (':jtar')
+		api 'pro.acuna:jabadaba:+'
+    //api project (':jabadaba')
     
   }
   

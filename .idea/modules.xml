@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Archiver.iml" filepath="$PROJECT_DIR$/Archiver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Archiver.iml" filepath="$PROJECT_DIR$/.idea/modules/Archiver.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/archiver/archiver.iml" filepath="$PROJECT_DIR$/.idea/modules/archiver/archiver.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1046469592/jabadaba.iml" filepath="$PROJECT_DIR$/.idea/modules/-1046469592/jabadaba.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-208878286/json.iml" filepath="$PROJECT_DIR$/.idea/modules/-208878286/json.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2108299538/jtar.iml" filepath="$PROJECT_DIR$/.idea/modules/2108299538/jtar.iml" />
     </modules>
   </component>
 </project>

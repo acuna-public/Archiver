@@ -66,15 +66,7 @@
 		
 		@Override
 		public InputStream getInputStream (String entryFile) throws Archiver.DecompressException {
-			
-			try {
-				open (Streams.toInputStream (new File (entryFile)));
-			} catch (IOException e) {
-				throw new Archiver.DecompressException (e);
-			}
-			
 			return inputStream;
-			
 		}
 		
 		private int i = 0;

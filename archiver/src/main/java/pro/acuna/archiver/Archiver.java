@@ -1,7 +1,7 @@
   package pro.acuna.archiver;
-      /*
-       Created by Acuna on 17.07.2017
-      */
+  /*
+   Created by Acuna on 17.07.2017
+  */
   
   import java.io.BufferedWriter;
   import java.io.ByteArrayOutputStream;
@@ -9,6 +9,7 @@
   import java.io.FileOutputStream;
   import java.io.IOException;
   import java.io.InputStream;
+  import java.io.OutputStream;
   import java.io.OutputStreamWriter;
   import java.net.URL;
   import java.util.ArrayList;
@@ -97,13 +98,6 @@
     public Archiver addProvider (Provider provider) {
       
       providers.add (provider);
-      return this;
-      
-    }
-    
-    public Archiver setProvider (Provider provider) {
-      
-      this.provider = provider;
       return this;
       
     }
@@ -212,7 +206,7 @@
       return Objects.getClassName (provider);
     }
     
-    private void init () throws DecompressException {
+    private Archiver init () throws DecompressException {
       
       try {
         
@@ -233,6 +227,8 @@
         }
         
         provider = provider.getInstance (this);
+        
+        return this;
         
       } catch (CompressException | IOException | Console.ConsoleException e) {
         throw new DecompressException (e);
@@ -484,7 +480,7 @@
         
         if (encryptedFile (entryFile)) {
           
-          ByteArrayOutputStream outputStream = new ByteArrayOutputStream ();
+          OutputStream outputStream = new ByteArrayOutputStream ();
           crypto.decrypt (inputStream, outputStream);
           
           return Streams.toInputStream (outputStream);
@@ -557,7 +553,7 @@
       
     }
     
-    private void setPermissions (File file, String entryFile) throws CompressException {
+    private void setPermissions (File file, String entryFile) {
       
       if (shell.equals (Console.su)) {
         
@@ -675,8 +671,8 @@
       return decompress (input.getAbsolutePath ());
     }
     
-    public static String  decompress (String input) throws DecompressException, OutOfMemoryException {
-      return new Archiver ().getEntry (input);
+    public static String decompress (String input) throws DecompressException, OutOfMemoryException {
+      return new Archiver ().open (input).getEntry ();
     }
     
     public static void unpack (String input, String output) throws DecompressException {
@@ -701,13 +697,12 @@
       
     }
     
-    public String unpack (String input) throws DecompressException, OutOfMemoryException {
+    public Archiver unpack (String input) throws DecompressException {
       return unpack (new File (input));
     }
     
-    public String unpack (File destFolder) throws DecompressException {
+    public Archiver unpack (File destFolder) throws DecompressException {
       
-      String output = "";
       prefDestFolder = destFolder;
       
       try {
@@ -750,7 +745,7 @@
         throw new DecompressException (e);
       }
       
-      return output;
+      return this;
       
     }
     
