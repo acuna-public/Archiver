@@ -8,10 +8,8 @@
     implementation fileTree (include: ['*.jar'], dir: 'libs')
     
 		implementation 'pro.acuna:jtar:+'
-    //implementation project (':jtar')
 		api 'pro.acuna:jabadaba:+'
-    //api project (':jabadaba')
-    
+  
   }
   
   sourceCompatibility = '1.7'
