@@ -9,7 +9,8 @@
     
 		implementation 'pro.acuna:jtar:+'
 		api 'pro.acuna:jabadaba:+'
-  
+    //api project (':jabadaba')
+    
   }
   
   sourceCompatibility = '1.7'

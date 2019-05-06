@@ -177,10 +177,12 @@
     
     public Archiver open (File file) throws DecompressException {
       
+      init (file);
+      
       try {
         
-        init (file);
-        return open (Streams.toInputStream (file), type);
+        provider.open (Streams.toInputStream (file));
+        return this;
         
       } catch (IOException e) {
         throw new DecompressException (e);
@@ -188,25 +190,11 @@
       
     }
     
-    public Archiver open (InputStream stream) throws DecompressException {
-      return open (stream, "");
-    }
-    
-    public Archiver open (InputStream stream, String type) throws DecompressException {
-      
-      this.type = type;
-      init ();
-      
-      provider.open (stream);
-      return this;
-      
-    }
-    
     public final String getName () {
       return Objects.getClassName (provider);
     }
     
-    private Archiver init () throws DecompressException {
+    private void init () throws DecompressException {
       
       try {
         
@@ -227,8 +215,6 @@
         }
         
         provider = provider.getInstance (this);
-        
-        return this;
         
       } catch (CompressException | IOException | Console.ConsoleException e) {
         throw new DecompressException (e);
