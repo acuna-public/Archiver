@@ -771,7 +771,7 @@
         
         return is;
         
-      } catch (IOException | HttpRequestException e) {
+      } catch (IOException | HttpRequestException | OutOfMemoryException e) {
         throw new DecompressException (e);
       }
       
