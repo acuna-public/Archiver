@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/Archiver.iml" filepath="$PROJECT_DIR$/Archiver.iml" group="Archiver" />
-      <module fileurl="file://$PROJECT_DIR$/archiver/archiver.iml" filepath="$PROJECT_DIR$/archiver/archiver.iml" group="Archiver/archiver" />
-    </modules>
-  </component>
-</project>
